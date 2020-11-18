@@ -118,26 +118,6 @@
       filterProject (i) {
         this.sort = i
       },
-      computed: {
-        // sortedProjects () {
-        //   const s = this.sort
-        //   const p = this.projects
-        //   switch (s) {
-        //     case 'Vue':
-        //       return p.filter(i => i.uses.includes(s))
-        //     case 'All Projects':
-        //       return this.tabs
-        //     case 'Vuetify':
-        //       return p.filter(i => i.uses.includes(s))
-        //     case 'React':
-        //       return p.filter(i => i.uses.includes(s))
-        //     case 'JQuery':
-        //       return p.filter(i => i.uses.includes(s))
-        //     default:
-        //       return this.projects
-        //   }
-        // },
-      },
     },
   }
 </script>

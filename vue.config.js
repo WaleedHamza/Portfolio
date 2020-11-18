@@ -3,6 +3,5 @@ module.exports = {
     disableHostCheck: true,
   },
   transpileDependencies: ['vuetify'],
-  publicPath: 'https://waleedhamza.github.io/Portfolio/',
-  // publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'production' ? 'https://waleedhamza.github.io/Portfolio/' : '/',
 }

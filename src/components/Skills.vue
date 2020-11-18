@@ -55,7 +55,7 @@
         >
           <span
             v-for="service in services"
-            :key="service"
+            :key="service.id"
           >
             <div
               class="d-flex flex-column align-center ma-3"
@@ -96,41 +96,49 @@
     data: () => ({
       services: [
         {
+          id: 0,
           name: 'Vue',
           icon: 'mdi-vuejs',
           blurb: '',
         },
         {
+          id: 1,
           name: 'React',
           icon: 'mdi-react',
           blurb: '',
         },
         {
+          id: 2,
           name: 'Javascript',
           icon: 'mdi-language-javascript',
           blurb: '',
         },
         {
+          id: 3,
           name: 'Node',
           icon: 'mdi-nodejs',
           blurb: '',
         },
         {
+          id: 4,
           name: 'Vuetify',
           icon: 'mdi-vuetify',
           blurb: '',
         },
         {
+          id: 5,
           name: 'Bootstrap',
           icon: 'mdi-bootstrap',
           blurb: '',
         },
         {
+          id: 6,
           name: 'CSS3',
           icon: 'mdi-language-css3',
           blurb: '',
         },
         {
+          id: 7,
           name: 'HTML5',
           icon: 'mdi-language-html5',
           blurb: '',
