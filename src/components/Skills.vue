@@ -11,7 +11,7 @@
         style="transform: translateX(55%)"
       />
       <v-row
-        class="d-flex flex-column justify-center align-center fill-height pt-10"
+        class="d-flex flex-column justify-center align-center fill-height"
       >
         <base-heading class="info--text ">
           Skills

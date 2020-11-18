@@ -22,7 +22,7 @@
         <base-text class="mb-5">
           I have always been a lover of languages. My first memories were teaching myself English while watching movies and then repeating the words to anyone who would listen. This initial spark created a passion to master English which lead me to become a translator for the US Army. Language, has the power to create connections and influence people.
           <br><br>
-          My love of languages has evolved with my career trajectory, so, it’s no surprise I found the same spark when introduced to computer languages. In code, I have the same power to create connections and influence people for good through my applications.
+          My love of languages has evolved with my career trajectory, so, it’s no surprise I found the same spark when introduced to programing languages. In code, I have the same power to create connections and influence people for good through my applications.
         </base-text>
       </v-col>
 

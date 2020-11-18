@@ -5,11 +5,11 @@
   >
     <v-row
       no-gutters
-      class="d-flex flex-column justify-center info text-center pa-5 white--text pb-10"
+      class="d-flex flex-column justify-center info text-center pa-5 white--text"
     >
       <base-bubble-1 />
 
-      <base-heading class="mb-5">
+      <base-heading class="">
         Get In Touch
       </base-heading>
 

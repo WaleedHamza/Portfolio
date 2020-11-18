@@ -10,7 +10,7 @@
       >
         <v-img
           :src="require('@/assets/welcome.png')"
-          height="100%"
+          height="100vh"
           class="contain-sm-and-down"
         />
       </v-col>
@@ -60,6 +60,9 @@
 </template>
 
 <style scoped>
+#welcome {
+  height: 100vh;
+}
  .heading {
 font-family: 'Prata', serif;
 }

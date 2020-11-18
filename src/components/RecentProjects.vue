@@ -8,11 +8,11 @@
       class="d-flex flex-column justify-center accent text-center pa-5 pb-10"
     >
       <base-bubble-1
-        style="transform: rotate(180deg) translateX(25%)"
+        style="transform: rotate(180deg) translateX(0%)"
       />
       <v-container>
-        <v-row class="d-flex justify-center mb-10">
-          <base-heading class="info--text mb-10">
+        <v-row class="d-flex justify-center">
+          <base-heading class="info--text">
             My Projects
           </base-heading>
         </v-row>
@@ -40,7 +40,7 @@
         >
           <span
             v-for="project in projects"
-            :key="project"
+            :key="project.id"
           >
             <v-card
               class="ma-2"
@@ -103,9 +103,9 @@
 
     data: () => ({
       projects: [
-        { name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('../assets/tmdbSearch.jpeg'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
-        { name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('../assets/audition.jpeg'), uses: ['React', 'Bootstrap', 'AWS'] },
-        { name: 'Trivia Game', url: 'https://waleedhamza.github.io/TriviaGame/', src: require('../assets/triviaGame.png'), uses: ['jQuery', 'Bootstrap'] },
+        { id: 0, name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('../assets/tmdbSearch.jpeg'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
+        { id: 1, name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('../assets/audition.jpeg'), uses: ['React', 'Bootstrap', 'AWS'] },
+        { id: 2, name: 'Trivia Game', url: 'https://waleedhamza.github.io/TriviaGame/', src: require('../assets/triviaGame.png'), uses: ['jQuery', 'Bootstrap'] },
       ],
       tabs: ['All Projects', 'Vue', 'Vuetify', 'React', 'JQuery'],
       sort: 'All Projects',
@@ -119,24 +119,24 @@
         this.sort = i
       },
       computed: {
-        sortedProjects () {
-          const s = this.sort
-          const p = this.projects
-          switch (s) {
-            case 'Vue':
-              return p.filter(i => i.uses.includes(s))
-            case 'All Projects':
-              return this.tabs
-            case 'Vuetify':
-              return p.filter(i => i.uses.includes(s))
-            case 'React':
-              return p.filter(i => i.uses.includes(s))
-            case 'JQuery':
-              return p.filter(i => i.uses.includes(s))
-            default:
-              return this.projects
-          }
-        },
+        // sortedProjects () {
+        //   const s = this.sort
+        //   const p = this.projects
+        //   switch (s) {
+        //     case 'Vue':
+        //       return p.filter(i => i.uses.includes(s))
+        //     case 'All Projects':
+        //       return this.tabs
+        //     case 'Vuetify':
+        //       return p.filter(i => i.uses.includes(s))
+        //     case 'React':
+        //       return p.filter(i => i.uses.includes(s))
+        //     case 'JQuery':
+        //       return p.filter(i => i.uses.includes(s))
+        //     default:
+        //       return this.projects
+        //   }
+        // },
       },
     },
   }
