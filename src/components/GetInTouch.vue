@@ -7,9 +7,8 @@
       no-gutters
       class="d-flex flex-column justify-center info text-center pa-5 white--text"
     >
-      <base-bubble-1 />
-
-      <base-heading class="">
+      <base-bubble-1 class="hidden-md-and-down" />
+      <base-heading>
         Get In Touch
       </base-heading>
 
@@ -73,6 +72,7 @@
 .form {
   width: 50vw;
 }
+
 @media only screen and (max-width: 375px) {
   .form {
   width: 100%;

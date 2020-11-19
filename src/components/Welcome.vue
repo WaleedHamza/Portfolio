@@ -33,14 +33,11 @@
             cols="10"
             md="8"
           >
-            <base-heading
-              class="heading"
-            >
+            <base-heading>
               Hi, My Name is
             </base-heading>
-            <base-heading
-              class="heading"
-            >
+
+            <base-heading>
               Waleed Hamza
             </base-heading>
             <base-text>
@@ -49,9 +46,6 @@
               who enjoys collaborating across multidisciplinary teams, but also can work independently. I’d love to grow as a user centered developer,
               and improve the human condition by connecting users one digital product at a time.
             </base-text>
-            <!-- <base-btn class="mt-4">
-              Learn More!
-            </base-btn> -->
           </v-col>
         </v-row>
 
@@ -66,8 +60,5 @@
 <style scoped>
 #welcome {
   height: 100vh;
-}
-.heading {
-  font-family: 'Oranienbaum', serif !important;
 }
 </style>
