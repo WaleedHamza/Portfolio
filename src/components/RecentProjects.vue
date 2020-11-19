@@ -103,8 +103,8 @@
 
     data: () => ({
       projects: [
-        { id: 0, name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('../assets/tmdbSearch.jpeg'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
-        { id: 1, name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('../assets/audition.jpeg'), uses: ['React', 'Bootstrap', 'AWS'] },
+        { id: 0, name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('../assets/tmdbSearch.png'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
+        { id: 1, name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('../assets/audition.png'), uses: ['React', 'Bootstrap', 'AWS'] },
         { id: 2, name: 'Trivia Game', url: 'https://waleedhamza.github.io/TriviaGame/', src: require('../assets/triviaGame.png'), uses: ['jQuery', 'Bootstrap'] },
       ],
       tabs: ['All Projects', 'Vue', 'Vuetify', 'React', 'JQuery'],
