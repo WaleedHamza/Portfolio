@@ -20,7 +20,7 @@
         <form
           action="https://formspree.io/f/mleolrpy"
           method="post"
-          class="test"
+          class="form"
         >
           <v-text-field
             color="info"
@@ -70,8 +70,12 @@
   }
 </script>
 <style scoped>
-.test {
+.form {
   width: 50vw;
-  margin: 0 auto;
+}
+@media only screen and (max-width: 375px) {
+  .form {
+  width: 100%;
+}
 }
 </style>

@@ -33,7 +33,11 @@
             cols="10"
             md="8"
           >
-            <base-heading>Hi, My Name is </base-heading>
+            <base-heading
+              class="heading"
+            >
+              Hi, My Name is
+            </base-heading>
             <base-heading
               class="heading"
             >
@@ -63,7 +67,7 @@
 #welcome {
   height: 100vh;
 }
- .heading {
-font-family: 'Prata', serif;
+.heading {
+  font-family: 'Oranienbaum', serif !important;
 }
 </style>
