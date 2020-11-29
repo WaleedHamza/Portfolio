@@ -13,7 +13,7 @@
       <v-row
         class="d-flex flex-column justify-center align-center fill-height"
       >
-        <base-heading class="info--text ">
+        <base-heading class="info--text">
           Skills
         </base-heading>
 

@@ -31,62 +31,55 @@
           </v-tab>
         </v-tabs> -->
       </v-container>
-      <v-container class="d-flex justify-center">
-        <transition-group
-          name="list"
-          tag="div"
-          class="list d-flex justify-center flex-wrap ma-4"
-          style="overflow: auto; white-space: nowrap;"
+      <v-container class="d-flex justify-center flex-wrap ma-4">
+        <span
+          v-for="project in projects"
+          :key="project.id"
         >
-          <span
-            v-for="project in projects"
-            :key="project.id"
+          <v-card
+            class="card ma-2"
+            width="344"
           >
-            <v-card
-              class="ma-2"
-              width="344"
-            >
-              <v-img
-                :src="project.src"
-                cover
-                aspect-ratio="1"
-                height="200px"
-              />
-              <v-card-title class="info--text mb-3">
-                {{ project.name }}
-              </v-card-title>
-              <v-card-subtitle class="d-flex justify-space-around flex-wrap">
-                <v-chip
-                  v-for="use in project.uses"
-                  :key="use"
-                  small
-                  color="info"
-                >{{ use }}</v-chip>
-              </v-card-subtitle>
-              <v-card-actions>
-                <v-spacer />
-                <a
-                  :href="project.url"
-                  style="text-decoration: none;"
-                ><v-btn
-                  color="info"
-                  text
-                >
-                  Visit Site
-                </v-btn>
-                </a>
-              </v-card-actions>
-            </v-card>
-          </span>
-        </transition-group>
+            <v-img
+              :src="project.src"
+              cover
+              aspect-ratio="1"
+              height="200px"
+            />
+            <v-card-title class="info--text mb-3">
+              {{ project.name }}
+            </v-card-title>
+            <v-card-subtitle class="d-flex justify-space-around flex-wrap">
+              <v-chip
+                v-for="use in project.uses"
+                :key="use"
+                small
+                color="info"
+              >{{ use }}</v-chip>
+            </v-card-subtitle>
+            <v-card-actions>
+              <v-spacer />
+              <a
+                :href="project.url"
+                style="text-decoration: none;"
+              ><v-btn
+                color="info"
+                text
+              >
+                Visit Site
+              </v-btn>
+              </a>
+            </v-card-actions>
+          </v-card>
+        </span>
       </v-container>
       <v-container
-        class="d-flex justify-center"
+        class="d-flex justify-center pa-0"
       >
         <v-sheet
           color="bright"
           width="80%"
-          class="py-4"
+          class="sheet pa-4"
         >
           <h1 class="info--text">
             Current work is proprietary. Details will be provided upon request.
@@ -135,5 +128,14 @@
 
 .list-leave-active {
   position: absolute;
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+  width: 80vw!important;
+}
+.v-sheet{
+    border: 1px solid red;
+}
 }
 </style>
