@@ -6,6 +6,7 @@
   >
     <v-row
       no-gutters
+      class="pa-5"
     >
       <base-bubble-2
         style="transform: translateX(55%)"
