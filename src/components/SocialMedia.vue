@@ -31,7 +31,7 @@
     <v-tooltip top>
       <template v-slot:activator="{ on, attrs }">
         <a
-          href="./resume.pdf"
+          href="./Waleed Hamza Resume (2021).pdf"
           style="text-decoration: none;"
         >
           <v-btn
