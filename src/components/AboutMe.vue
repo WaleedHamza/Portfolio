@@ -8,7 +8,7 @@
       no-gutters
     >
       <v-col
-        class="layout wrap pa-10"
+        class="layout wrap"
         cols="12"
         md="8"
       >
@@ -22,7 +22,7 @@
         >
           <v-col
             cols="10"
-            md="10"
+            md="8"
           >
             <base-heading class="info--text">
               About Me

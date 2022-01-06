@@ -30,9 +30,22 @@
           justify="center"
         >
           <v-col
+            class="layout wrap"
             cols="10"
             md="8"
           >
+            <div
+              :v-if="$vuetify.breakpoint.smAndDown"
+              class="d-flex justify-center pb-4"
+            >
+              <v-avatar size="120">
+                <img
+                  :src="require('@/assets/avatar.png')"
+                  alt="John"
+                >
+              </v-avatar>
+            </div>
+
             <base-heading>
               Hi, My Name is
             </base-heading>

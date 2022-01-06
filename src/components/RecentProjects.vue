@@ -31,7 +31,7 @@
           </v-tab>
         </v-tabs> -->
       </v-container>
-      <v-container class="d-flex justify-center flex-wrap ma-4">
+      <v-container class="d-flex justify-center flex-wrap">
         <span
           v-for="project in projects"
           :key="project.id"
@@ -57,18 +57,21 @@
                 color="info"
               >{{ use }}</v-chip>
             </v-card-subtitle>
+            <v-card-text
+              v-if="project.details"
+              class="info--text my-4"
+            >
+              <h3>{{ project.details }}</h3>
+            </v-card-text>
             <v-card-actions>
-              <v-spacer />
-              <a
-                :href="project.url"
-                style="text-decoration: none;"
-              ><v-btn
+              <v-spacer /><v-btn
+                v-if="project.url"
                 color="info"
                 text
+                @click="goTo(project.url)"
               >
                 Visit Site
               </v-btn>
-              </a>
             </v-card-actions>
           </v-card>
         </span>
@@ -96,9 +99,9 @@
 
     data: () => ({
       projects: [
-        { id: 0, name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('../assets/tmdbSearch.png'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
-        { id: 1, name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('../assets/audition.png'), uses: ['React', 'Bootstrap', 'AWS'] },
-        { id: 2, name: 'Trivia Game', url: 'https://waleedhamza.github.io/TriviaGame/', src: require('../assets/triviaGame.png'), uses: ['jQuery', 'Bootstrap'] },
+        { id: 0, name: 'TMDB Search', url: 'https://tmdbprod.herokuapp.com/', src: require('@/assets/tmdbSearch.png'), uses: ['Vue', 'Vuetify', 'Vuex', 'Axios'] },
+        { id: 1, name: 'Audition', url: 'https://uncauditionapp.herokuapp.com/', src: require('@/assets/audition.png'), uses: ['React', 'Bootstrap', 'AWS'] },
+        { id: 2, name: 'Trivia Game', url: 'https://waleedhamza.github.io/TriviaGame/', src: require('@/assets/triviaGame.png'), uses: ['jQuery', 'Bootstrap'] },
       ],
       tabs: ['All Projects', 'Vue', 'Vuetify', 'React', 'JQuery'],
       sort: 'All Projects',
@@ -110,6 +113,9 @@
     methods: {
       filterProject (i) {
         this.sort = i
+      },
+      goTo (prop) {
+        window.open(prop, '_blank')
       },
     },
   }

@@ -21,7 +21,6 @@
         <v-alert
           outlined
           color="info"
-          width="50%"
         >
           <v-row
             v-for="(skill, i) in skills"
@@ -48,9 +47,6 @@
       </v-row>
 
       <v-container fluid>
-        <!-- <base-heading class="info--text text-center mb-10">
-          Technologies
-        </base-heading> -->
         <v-container
           class="list d-flex justify-center flex-wrap"
         >
@@ -63,7 +59,7 @@
               with="500"
             >
               <v-avatar
-                class="elevation-6 mb-2"
+                class="elevation-6 mb-1"
                 color="#69A1BB"
                 size="90"
                 tile
@@ -170,3 +166,14 @@
     }),
   }
 </script>
+
+<style scoped>
+.v-alert{
+  width: 60%;
+}
+ @media only screen and (max-width: 375px) {
+.v-alert{
+  width: 90%;
+}
+ }
+</style>
