@@ -1,77 +1,122 @@
 <template>
   <section
     id="welcome"
-    class="overflow-hidden"
   >
-    <v-row no-gutters>
-      <v-col
-        class="hidden-sm-and-down"
-        md="4"
+    <div
+      class="d-flex"
+      style=" height: 100vh;"
+    >
+      <div
+        class="fcc"
+        style="flex: 1;"
       >
-        <v-img
-          :src="require('@/assets/welcome.png')"
-          height="100vh"
-          class="contain-sm-and-down"
-        />
-      </v-col>
-
-      <v-col
-        class="align-content-space-between layout wrap"
-        cols="12"
-        md="8"
-        :pa-5="$vuetify.breakpoint.smAndDown"
-      >
-        <base-bubble-1
-          style="transform: rotate(180deg) translatex(15%)"
-        />
-
-        <v-row
-          align="center"
-          justify="center"
+        <div
+          class="px-sm-8 mx-xs-5 overflow-scroll"
+          style="width: 80%;"
         >
-          <v-col
-            class="layout wrap"
-            cols="10"
-            md="8"
+          <base-heading
+            class="text-sm-center text-md-left"
           >
-            <div
-              :v-if="$vuetify.breakpoint.smAndDown"
-              class="d-flex justify-center pb-4"
+            Full Stack Developer
+          </base-heading>
+
+          <base-subheading
+            class="text-sm-center text-md-left"
+          >
+            Resolving design problems, building smart user interfaces and useful interactions, developing rich web applications and seamless web experiences.
+          </base-subheading>
+          <!-- <base-heading
+              class="text-sm-center text-md-left"
             >
-              <v-avatar size="120">
-                <img
-                  :src="require('@/assets/avatar.png')"
-                  alt="John"
-                >
-              </v-avatar>
-            </div>
-
-            <base-heading>
-              Hi, My Name is
-            </base-heading>
-
-            <base-heading>
               Waleed Hamza
             </base-heading>
-            <base-text>
-              I’m a solution focused developer eager to tackle challenging issues and provide innovative solutions.
-              My strengths are persistence, personal integrity and a positive attitude. I’m a resourceful, life-long learner,
-              who enjoys collaborating across multidisciplinary teams, but also can work independently. I’d love to grow as a user centered developer,
-              and improve the human condition by connecting users one digital product at a time.
-            </base-text>
-          </v-col>
-        </v-row>
 
-        <base-bubble-2
-          style="transform: rotate(180deg) translate(-200px, -15%)"
+            <p>
+              I am a solution focused developer eager to tackle challenging issues
+              and provide innovative solutions. My strengths are persistence,
+              personal integrity and a positive attitude. I’m a resourceful,
+              life-long learner, who enjoys collaborating across multidisciplinary
+              teams, but also can work independently. I am a human-centered developer improving the human condition one digital product at a time.
+              As a user-centered developer, my goal is to improve the human condition by
+              connecting users one digital product at a time. I strive to create user-friendly
+              and intuitive products that meet the needs of the people who use them. I am
+              committed to staying up-to-date with the latest technologies and industry trends
+              to ensure that the solutions I provide are cutting-edge and effective.
+              <br>
+              <br>
+              I am a solution-focused developer with a passion for tackling challenging
+              issues and providing innovative solutions. I believe that my persistence,
+              personal integrity, and positive attitude are my greatest strengths as a developer.
+              I am a resourceful, life-long learner, who enjoys collaborating across
+              multidisciplinary teams, but also can work independently.
+              <br>
+              <br>
+              I am excited to share my portfolio and experience with you on this website.
+              Please take a look around and feel free to contact me with any questions or
+              opportunities. I am always eager to connect with other like-minded developers
+              and professionals in the industry. Let's build something great together!
+            </p> -->
+        </div>
+      </div>
+      <div
+        style="flex: 1; width: 100%;"
+        class="fcc"
+      >
+        <div
+          class="image-stack fcc"
+        >
+          <v-img
+            :src="require('@/assets/Dots.svg')"
+            cover
+            alt="Dots"
+            class="heroImg"
+          />
+        </div>
+        <v-img
+          :src="require('@/assets/Hero.svg')"
+          contain
+          alt="Desktop Mobile Tablet"
+          class="heroImg"
+          style="width: 30%;"
         />
-      </v-col>
-    </v-row>
+      </div>
+    </div>
+    <v-img
+      :src="require('@/assets/CodeBlockblur.svg')"
+      contain
+      alt="CodeBlockblur"
+      class=""
+      style="width: 30%; overflow: hidden; top: -200px; left: -200px;"
+    />
   </section>
 </template>
 
+<script>
+  export default {
+    name: 'Welcome',
+    components: {
+    },
+    data: () => ({
+      replace: [
+        { from: 'Web Developer', to: 'UX/UI Designer' },
+        { from: 'UX/UI Designer', to: 'Full Satck Developer.' },
+      ],
+    }),
+  }
+</script>
 <style scoped>
 #welcome {
   height: 100vh;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left,  #1E1E1E, #1E1E1E, #121313);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #1E1E1E, #1E1E1E, #121313); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.image-stack {
+  position: relative;
+  width: 100%;
+}
+.heroImg {
+  position: absolute;
 }
 </style>

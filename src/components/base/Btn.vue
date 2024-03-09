@@ -1,7 +1,7 @@
 <template>
   <v-btn
-    color="secondary"
-    rounded
+    class="btn"
+    outlined
     v-bind="$attrs"
     v-on="$listeners"
   >
@@ -14,3 +14,10 @@
     name: 'BaseBtn',
   }
 </script>
+<style scoped>
+.btn{
+  border: 1px solid rgb(169, 169, 169, 0.5);
+  width: 100%;
+  color: rgb(169, 169, 169, 0.8)
+}
+</style>

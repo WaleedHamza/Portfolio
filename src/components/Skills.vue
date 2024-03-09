@@ -1,51 +1,34 @@
-/* eslint-disable vuetify/grid-unknown-attributes */
 <template>
   <section
     id="services"
-    class="overflow-hidden mb-5"
+    class="overflow-hidden mb-5 fcc"
   >
     <v-row
       no-gutters
-      class="pa-5"
+      class="pa-5 fcc flex-column"
     >
-      <base-bubble-2
-        style="transform: translateX(55%)"
-      />
-      <v-row
-        class="d-flex flex-column justify-center align-center fill-height"
+      <base-heading
+        class="text-sm-center text-md-left mb-10"
       >
-        <base-heading class="info--text">
-          Skills
-        </base-heading>
+        Skills & Experience
+      </base-heading>
+      <base-text
+        style="width: 40%;"
+        class="mx-auto pt-5"
+      >
+        I am a solution focused developer eager to tackle challenging issues
+        and provide innovative solutions. My strengths are persistence,
+        personal integrity and a positive attitude. I’m a resourceful,
+        life-long learner, who enjoys collaborating across multidisciplinary
+        teams, but also can work independently. I am a human-centered developer improving the human condition one digital product at a time.
+      </base-text>
 
-        <v-alert
-          outlined
-          color="info"
-        >
-          <v-row
-            v-for="(skill, i) in skills"
-            :key="i"
-            :style="`color: ${skill.color};`"
-          >
-            <v-col
-              class="d-flex text-uppercase"
-              v-text="skill.name"
-            />
-
-            <v-col
-              class="text-right"
-              v-text="`${skill.value}%`"
-            />
-
-            <v-progress-linear
-              :value="skill.value"
-              :color="skill.color"
-              height="8"
-            />
-          </v-row>
-        </v-alert>
-      </v-row>
-
+      <base-text>
+        Visit my <a
+          style="text-decoration:none;"
+          href="https://www.linkedin.com/in/waleedhamza/"
+        >LinkedIn</a> For more details
+      </base-text>
       <v-container fluid>
         <v-container
           class="list d-flex justify-center flex-wrap"
@@ -59,8 +42,7 @@
               with="500"
             >
               <v-avatar
-                class="elevation-6 mb-1"
-                color="#69A1BB"
+                class="mb-1"
                 size="90"
                 tile
               >
@@ -76,7 +58,7 @@
                   class="mb-2"
                   v-text="service.name"
                 />
-                <div v-html="service.blurb" />
+                <!-- <div v-html="service.blurb" /> -->
               </base-text>
             </div>
           </span>
@@ -89,7 +71,9 @@
 <script>
   export default {
     name: 'Services',
-
+    components: {
+      CodeBlock: () => require('@/components/base/CodeBlock'),
+    },
     data: () => ({
       services: [
         {

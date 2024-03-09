@@ -1,18 +1,14 @@
 <template>
   <v-footer
-    height="88"
+    height="50"
     class="justify-center"
   >
-    <social-media large />
+    <span>&copy; {{ new Date().getFullYear() }} Waleed Hamza</span>
   </v-footer>
 </template>
 
 <script>
   export default {
     name: 'CoreFooter',
-
-    components: {
-      SocialMedia: () => import('@/components/SocialMedia'),
-    },
   }
 </script>

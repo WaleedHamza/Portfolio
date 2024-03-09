@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     v-scroll="onScroll"
-    :color="!isScrolling ? 'transparent' : 'white'"
+    color="transparent"
     fixed
     flat
   >
@@ -13,12 +13,29 @@
         contain
         height="50"
         width="100"
+        style="cursor:pointer"
+        @click="scrollToSection(1)"
       />
     </v-slide-x-transition>
 
     <v-spacer />
 
-    <!-- <social-media v-if="showLogo" /> -->
+    <div
+      v-show="!isScrolling ? false : true"
+    >
+      <v-btn
+        v-for="b in navButtons"
+        :key="b.index"
+        text
+        @click="scrollToSection(b.index)"
+      >
+        <p
+          class="ma-0 pa-0"
+        >
+          {{ b.name }}
+        </p>
+      </v-btn>
+    </div>
   </v-app-bar>
 </template>
 
@@ -27,16 +44,52 @@
     name: 'CoreAppBar',
 
     components: {
-      // SocialMedia: () => import('@/components/SocialMedia'),
     },
 
     data: () => ({
       showLogo: false,
       isScrolling: false,
       show: true,
+      navButtons: [
+        {
+          name: 'About',
+          index: 2,
+        },
+        {
+          name: 'Skills',
+          index: 3,
+        },
+        {
+          name: 'Projects',
+          index: 4,
+        },
+        {
+          name: 'Contact',
+          index: 5,
+        },
+      ],
     }),
 
     methods: {
+      scrollToSection (i) {
+        switch (i) {
+          case 1:
+            this.$nextTick().then(() => document.querySelector('#section1')?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+            break
+          case 2:
+            this.$nextTick().then(() => document.querySelector('#section2')?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+            break
+          case 3:
+            this.$nextTick().then(() => document.querySelector('#section3')?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+            break
+          case 4:
+            this.$nextTick().then(() => document.querySelector('#section4')?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+            break
+          case 5:
+            this.$nextTick().then(() => document.querySelector('#section5')?.scrollIntoView({ behavior: 'smooth', block: 'center' }))
+            break
+        }
+      },
       onScroll () {
         const offset = window.pageYOffset
         this.isScrolling = offset > 50
@@ -54,3 +107,5 @@
     },
   }
 </script>
+<style>
+</style>
